@@ -10,7 +10,7 @@ feature "Creating Tickets" do
   end
 
   scenario "Creating a ticket" do 
-    fill_in "Title", with: "Non-standards compliance"
+    fill_in "Title", with: "Standards compliance"
     fill_in "Description", with: "My pages are ugly!"
     click_button "Create Ticket"
 
@@ -25,7 +25,7 @@ feature "Creating Tickets" do
     expect(page).to have_content("Description can't be blank")
   end
   scenario "Description must be longer than 10 characters" do
-    fill_in "Title", with: "Non-standards compliance"
+    fill_in "Title", with: "Standards compliance"
     fill_in "Description", with: "it sucks"
     click_button "Create Ticket"
 
